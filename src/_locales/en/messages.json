@@ -1,0 +1,11 @@
+{
+    "extension_name": {
+        "message": "Test extension for nightmountains library"
+    },
+    "extension_description": {
+        "message": "Example usage of the nightmountains library"
+    },
+    "action_title": {
+        "message": "nightmountains"
+    }
+}

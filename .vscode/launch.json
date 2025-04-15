@@ -1,0 +1,57 @@
+{
+    /**
+     * WARNING: These configurations are specifically for MacOS, and are
+     * intended for adhoc testing and debugging using system-installed browsers.
+     * To test in a more isolated environment, use Playwright's hermetic browser installations 
+     * under the node_modules/playwright-core/.local-browsers directory.
+     *
+     * NOTE: Despite trying to isolate user data from system-wide browser installations,
+     * Edge will still pull information (like the user's Microsoft account, e.g. mickey@outlook.com)
+     * from whatever account is currently logged in to the machine (on macos at least). That is why
+     * the "Launch Edge" configuration has so many flags set in an attempt to disable
+     * some of that unwanted access to the user's data.
+     *
+     * https://marketplace.visualstudio.com/items?itemName=firefox-devtools.vscode-firefox-debug
+     */
+    "configurations": [
+        {
+            "name": "Launch Chrome",
+            "request": "launch",
+            "type": "chrome",
+            "url": "chrome://extensions/",
+            "webRoot": "${workspaceFolder}",
+            "runtimeArgs": [
+                "--load-extension=${workspaceFolder}/webext/chrome"
+            ],
+            "userDataDir": "${workspaceFolder}/work/browsers/chrome",
+            "sourceMaps": true
+        },
+        {
+            "name": "Launch Edge",
+            "request": "launch",
+            "type": "msedge",
+            "url": "edge://extensions/",
+            "webRoot": "${workspaceFolder}",
+            "runtimeArgs": [
+                "--load-extension=${workspaceFolder}/webext/edge"
+            ],
+            "userDataDir": "${workspaceFolder}/work/browsers/edge",
+            "preLaunchTask": "Create edge directory",
+            "sourceMaps": true
+        },
+        {
+            "name": "Launch Firefox",
+            "type": "firefox",
+            "request": "launch",
+            "url": "about:addons",
+            "webRoot": "${workspaceFolder}",
+            "keepProfileChanges": true,
+            "profileDir": "${workspaceFolder}/work/browsers/firefox",
+            // "firefoxExecutable": "/Applications/Firefox Nightly.app/Contents/MacOS/firefox", // Path to Firefox executable
+            "firefoxExecutable": "/Applications/Firefox Nightly.app/Contents/MacOS/firefox",
+            "preferences": {
+                "extensions.htmlaboutaddons.recommendations.enabled": false
+            }
+        }
+    ]
+}
