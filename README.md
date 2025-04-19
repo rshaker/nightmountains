@@ -34,7 +34,7 @@ PLAYWRIGHT_BROWSERS_PATH=0 npx playwright install
 # Build library
 npm run build:dev
 
-# Build browser all extensions
+# Build all browser extensions
 npm run build:webext:dev
 ```
 

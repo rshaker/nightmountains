@@ -1,4 +1,4 @@
-import { dat } from "../../playwright/harness/gestalt";
+import { markers } from "./gestalt";
 
 /**
  * Browser‑agnostic context detector
@@ -14,10 +14,6 @@ export enum ContextType {
 
 /** Returns the current execution context. */
 export function getBrowserContext(): ContextType {
-
-
-    console.log("dat from gestalt:", dat);
-
 
     // 1. Background **service‑worker / background‑page**
     if (isBackgroundPage()) {

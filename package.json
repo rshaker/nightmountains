@@ -51,7 +51,7 @@
         "clean:dist": "rimraf dist",
         "clean:playwright": "rimraf playwright/playwright-report playwright/test-results",
         "clean:webext": "rimraf webext",
-        "playwright:install-browsers": "playwright install",
+        "playwright:install-browsers": "PLAYWRIGHT_BROWSERS_PATH=0 playwright install",
         "playwright:report": "playwright show-report playwright/playwright-report",
         "playwright:test:dev": "npm run build:webext:dev && npm run build:dev && playwright test",
         "playwright:test:prod": "npm run build:webext:prod && npm run build:prod && playwright test",

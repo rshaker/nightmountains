@@ -33,7 +33,7 @@ export default defineConfig({
 
         // Projects that reuse the authenticated session state
         {
-            name: "chromium",
+            name: "auth project",
             use: {
                 ...devices["Desktop Chrome"],
                 // storageState, // Reuse cookies
