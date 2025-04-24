@@ -2,6 +2,7 @@ import path from "path"
 import { BrowserContext, Page, test, Worker } from "@playwright/test";
 import { chromium, firefox, webkit } from "playwright";
 import fs from 'fs';
+import bcd from '@mdn/browser-compat-data' with { type: 'json' };
 
 const extensionPath = path.join(__dirname, "../../webext/chrome");
 // const userDataDir = path.join(__dirname, "../.user-data");
@@ -50,6 +51,14 @@ test.describe("Test with extension", () => {
 
     test.afterAll(async () => {
         await context.close();
+    });
+
+    test("Browser compat data", async () => {
+        console.log(bcd.webextensions.__compat?.support);
+
+        // Pause (for debugging)
+        test.setTimeout(0);
+        await page.pause();
     });
 
     test("Test getBrowserContext()", async () => {
