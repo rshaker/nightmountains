@@ -1,6 +1,10 @@
 import { getBrowserContext } from "../util/context";
 import { markers, predictContext } from "../util/gestalt";
+// import { getBrowserName } from "../util/determine";
+import { detectContext, getBrowserName } from "../util/detect";
 
+console.info("detectContext", detectContext());
+console.info("getBrowserName", getBrowserName());
 console.info("navigator.userAgent", navigator.userAgent);
 console.info("Markers:", markers);
 console.info("Prediction:", predictContext());

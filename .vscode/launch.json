@@ -7,9 +7,7 @@
      *
      * NOTE: Despite trying to isolate user data from system-wide browser installations,
      * Edge will still pull information (like the user's Microsoft account, e.g. mickey@outlook.com)
-     * from whatever account is currently logged in to the machine (on macos at least). That is why
-     * the "Launch Edge" configuration has so many flags set in an attempt to disable
-     * some of that unwanted access to the user's data.
+     * from whatever account is currently logged in to the machine (on macos at least).
      *
      * https://marketplace.visualstudio.com/items?itemName=firefox-devtools.vscode-firefox-debug
      */
@@ -41,8 +39,8 @@
         },
         {
             "name": "Launch Firefox",
-            "type": "firefox",
             "request": "launch",
+            "type": "firefox",
             "url": "about:debugging#/runtime/this-firefox",
             "webRoot": "${workspaceFolder}",
             "keepProfileChanges": true,
