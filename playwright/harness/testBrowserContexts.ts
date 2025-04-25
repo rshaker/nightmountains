@@ -1,13 +1,11 @@
-import { ContextType, getBrowserContext } from "../../src/util/context";
-
-
-
+// import { ContextType, getBrowserContext } from "../../src/util/context";
+import { detectContext, BrowserContextType } from "../../src/util/detect";
 
 export async function getCurrentAndPageContexts() {
-    const currentContext = getBrowserContext();
+    const currentContext = detectContext();
     let results: any[] = [currentContext];
 
-    if (currentContext === ContextType.BACKGROUND) {
+    if (currentContext === BrowserContextType.BACKGROUND_WORKER) {
         results = [...results, ...await getPageContexts()];
     }
     return results;
@@ -48,7 +46,7 @@ export async function getPageContexts() {
     return results;
 }
 
-globalThis.getBrowserContext = getBrowserContext;
+globalThis.getBrowserContext = detectContext;
 globalThis.getPageContexts = getPageContexts;
 globalThis.getCurrentAndPageContexts = getCurrentAndPageContexts;
 

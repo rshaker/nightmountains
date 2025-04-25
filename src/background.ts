@@ -1,14 +1,14 @@
-import { getBrowserContext } from "./util/context";
-import { markers, predictContext } from "./util/gestalt";
+// import { getBrowserContext } from "./util/context";
+// import { markers, predictContext } from "./util/gestalt";
 // import { getBrowserName } from "../util/determine";
 import { detectContext, getBrowserName } from "./util/detect";
 
 console.info("detectContext", detectContext());
 console.info("getBrowserName", getBrowserName());
 console.info("navigator.userAgent", navigator.userAgent);
-console.info("Markers:", markers);
-console.info("Prediction:", predictContext());
-console.info(`Startup in context: ${getBrowserContext()}`);
+// console.info("Markers:", markers);
+// console.info("Prediction:", predictContext());
+// console.info(`Startup in context: ${getBrowserContext()}`);
 
 // Install scripts in updated tabs, and on extension [re]load
 chrome.tabs.onUpdated.addListener(async (tabId, changeInfo, tab) => {
