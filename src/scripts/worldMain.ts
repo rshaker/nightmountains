@@ -1,4 +1,4 @@
-import { detectContext, getBrowserName } from "../util/detect";
+import { detectContext, getBrowserName } from "@rshaker/context-detect";
 
 console.info("detectContext", detectContext());
 console.info("getBrowserName", getBrowserName());

@@ -1,5 +1,6 @@
 // import { ContextType, getBrowserContext } from "../../src/util/context";
-import { detectContext, BrowserContextType } from "../../src/util/detect";
+// import { detectContext, BrowserContextType } from "../../src/util/detect";
+import { detectContext, BrowserContextType } from "@rshaker/context-detect";
 
 export async function getCurrentAndPageContexts() {
     const currentContext = detectContext();
