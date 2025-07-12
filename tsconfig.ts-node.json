@@ -1,0 +1,16 @@
+{
+    "ts-node": {
+        "compilerOptions": {
+            "target": "ES2022", // module implies => es2022
+            "module": "node16", // node16 is currently identical to nodenext
+            "moduleResolution": "node16",
+            // module implies => "moduleDetection": "force",
+            // module implies => "esModuleInterop": true,
+            "lib": [
+                "DOM",
+                "DOM.Iterable",
+                "ES2022"
+            ],
+        }
+    }
+}

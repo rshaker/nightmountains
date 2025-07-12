@@ -17,5 +17,6 @@
         "skipLibCheck": true,
         "declaration": true, // Generate .d.ts files
         "sourceMap": true // Generate source maps
-    }
+    },
+    "extends": "./tsconfig.ts-node.json"
 }
