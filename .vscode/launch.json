@@ -18,6 +18,8 @@
             "type": "chrome",
             "url": "chrome://extensions/",
             "webRoot": "${workspaceFolder}",
+            // The path "chromium-1161" will need to be updated if the version of Chromium changes. Do not use this yet!
+            // "runtimeExecutable": "${workspaceFolder}/node_modules/playwright-core/.local-browsers/chromium-1161/chrome-mac/Chromium.app/Contents/MacOS/Chromium",
             "runtimeArgs": [
                 "--load-extension=${workspaceFolder}/webext/chrome"
             ],
