@@ -46,7 +46,7 @@
         "build:dev:watch": "npm run clean:dist && webpack --mode development --config webpack.config.js --watch",
         "build:prod": "npm run clean:dist && webpack --mode production --config webpack.config.js",
         "build:prod:watch": "npm run clean:dist && webpack --mode production --config webpack.config.js --watch",
-        "clean": "npm run clean:dist && npm run clean:browser && npm run clean:webext",
+        "clean": "npm run clean:dist && npm run clean:browsers && npm run clean:webext",
         "clean:browsers": "rimraf work/browsers",
         "clean:dist": "rimraf dist",
         "clean:playwright": "rimraf playwright/playwright-report playwright/test-results",

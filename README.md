@@ -40,8 +40,6 @@ npm run build:webext:dev
 
 ## Features
 
-This section was GPT's idea...
-
 - 🔧 **Development Ready** - Preconfigured TypeScript, WebPack, and testing setup
 - 📦 **Library Template** - Structure optimized for publishing as an npm package
 - 🧪 **Testing Framework** - Includes Playwright for end-to-end testing
