@@ -58,6 +58,9 @@ test.describe("Test with extension", () => {
     });
 
     test("Test getBrowserContext()", async () => {
+        // The harness script this test injects is only compiled in development builds
+        test.skip(process.env.TEST_BUILD === "prod", "The test harness is not included in production builds");
+
         // await page.evaluate(async () => {
         //     console.log("Maintenance script running");
         //     //# sourceURL=page.evaluate
