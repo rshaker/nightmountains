@@ -58,7 +58,7 @@
         "playwright:test-ui:dev": "npm run build:webext:dev && npm run build:dev && playwright test --ui",
         "playwright:test-ui:prod": "npm run build:webext:prod && npm run build:prod && playwright test --ui",
         "serve": "webpack serve --config webpackDevServer.config.js",
-        "test": "npm run playwright:test:prod"
+        "test": "npm run playwright:test:dev"
     },
     "main": "./dist/nightmountains.js",
     "types": "./dist/src/index.d.ts",
@@ -67,7 +67,7 @@
     ],
     "devDependencies": {
         "@mdn/browser-compat-data": "^6.0.8",
-        "@playwright/test": "^1.49.1",
+        "@playwright/test": "^1.65.1",
         "@types/chrome": "^0.0.287",
         "@types/firefox-webext-browser": "^120.0.4",
         "@types/node": "^22.10.2",
@@ -75,7 +75,7 @@
         "copy-webpack-plugin": "^11.0.0",
         "date-fns": "^4.1.0",
         "dotenv": "^16.4.7",
-        "playwright": "^1.51.1",
+        "playwright": "^1.65.1",
         "rimraf": "^5.0.5",
         "style-loader": "^4.0.0",
         "ts-loader": "^9.0.0",
@@ -93,6 +93,6 @@
         "node": ">=22.12.0"
     },
     "dependencies": {
-        "@rshaker/context-detect": "file:../context-detect"
+        "@rshaker/context-detect": "^0.2.7"
     }
 }
