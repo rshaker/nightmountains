@@ -28,7 +28,7 @@ test.describe("Test with extension", () => {
     });
 
     test.afterAll(async () => {
-        await context.close();
+        await context?.close();
     });
 
     test("Placeholder does nothing", async () => {
@@ -36,9 +36,5 @@ test.describe("Test with extension", () => {
             console.log("Maintenance script running");
             //# sourceURL=page.evaluate
         });
-
-        // Pause (for debugging)
-        test.setTimeout(0);
-        await page.pause();
     });
 });

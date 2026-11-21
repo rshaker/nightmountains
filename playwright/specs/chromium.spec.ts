@@ -50,15 +50,11 @@ test.describe("Test with extension", () => {
     });
 
     test.afterAll(async () => {
-        await context.close();
+        await context?.close();
     });
 
     test("Browser compat data", async () => {
         console.log(bcd.webextensions.__compat?.support);
-
-        // Pause (for debugging)
-        test.setTimeout(0);
-        await page.pause();
     });
 
     test("Test getBrowserContext()", async () => {
@@ -81,7 +77,7 @@ test.describe("Test with extension", () => {
 
         // Check the context types of the background worker and all open pages
         const workers = context.serviceWorkers();
-        workers.forEach(async (worker) => {
+        for (const worker of workers) {
             // Find the background service worker
             if (worker.url() === `chrome-extension://${extensionId}/background.js`) {
                 // Install the script in the service worker
@@ -92,10 +88,6 @@ test.describe("Test with extension", () => {
                 });
                 console.log("Service worker result:", result);
             }
-        });
-
-        // Pause (for debugging)
-        test.setTimeout(0);
-        await page.pause();
+        }
     });
 });
