@@ -1,7 +1,7 @@
 {
     "name": "@rshaker/nightmountains",
     "version": "0.1.0",
-    "description": "Messaging support for inter-context communication",
+    "description": "Template for developing TypeScript libraries that work in both standard web pages and browser extensions, with preconfigured Webpack and Playwright testing",
     "license": "MIT",
     "author": {
         "name": "Ron Shaker",
@@ -89,7 +89,8 @@
         "last 2 Chrome versions"
     ],
     "engines": {
-        "node": ">=22.12.0"
+        "node": ">=22.12.0",
+        "npm": ">=10.9.0"
     },
     "dependencies": {
         "@rshaker/context-detect": "^0.2.7"

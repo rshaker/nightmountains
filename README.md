@@ -12,12 +12,10 @@
 
 Nightmountains provides a ready-to-use template for developing libraries that work in both standard web pages and browser extensions. It includes preconfigured TypeScript, WebPack, and Playwright testing tools.
 
-This project is unfinished, unstable, and under development.
-
 ## Installation
 
 ```bash
-# Clone the private repo
+# Clone the repo
 git clone git@github.com:rshaker/nightmountains.git
 cd nightmountains
 
